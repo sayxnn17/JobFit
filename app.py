@@ -148,6 +148,7 @@ if analyze:
 
         st.write("\n\n")
         
+        st.subheader("Missing Keywords:")
         if report.missing_keywords:
             st.write("Following keywords from the job description neither find direct or indirect mention in the resume.")
             for kwd in report.missing_keywords:
@@ -167,8 +168,10 @@ if analyze:
                 st.write(f"SECTION: {section}")
                 st.write(f"ORIGINAL TEXT: {imp.original_text}")
                 st.write(f"IMPROVED TEXT: {imp.improved_text}")
-                st.write(f"MISSING INFORMATION: {imp.missing_information}")
-                st.write(f"RELEVANCE: {imp.relevance_to_jd}\n\n")
+                if imp.missing_information:
+                    st.write(f"MISSING INFORMATION: {imp.missing_information}")
+                if imp.relevance_to_jd:
+                    st.write(f"RELEVANCE: {imp.relevance_to_jd}\n\n")
 
         st.divider()
 
