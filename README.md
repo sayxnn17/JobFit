@@ -64,6 +64,11 @@ streamlit run app.py
 5. **Chroma**: Helps in storing and retrieving the embedding vectors of the resume as needed.
 6. **Pydantic**: Defines structured schemas for requirements analysis, ATS scores, and SWOT results to enforce consistent outputs from the LLM.
 
+## Architecture Diagram
+
+![JobFit Pipeline](utils/pipeline.png)
+
+
 ## Contribution Guidelines
 
 I welcome contributions to JobFit! Here's how you can contribute:
